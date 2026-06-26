@@ -59,3 +59,11 @@ footer {
 footer p {
     margin-bottom: 5px;
 }
+/* ==========================
+   SECTIONS
+========================== */
+
+section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
