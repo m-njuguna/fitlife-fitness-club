@@ -13,3 +13,19 @@ if (form) {
         }
     });
 }
+function calculateBMI() {
+
+    let weight = parseFloat(document.getElementById("weight").value);
+    let height = parseFloat(document.getElementById("height").value);
+
+    if (!weight || !height) {
+        document.getElementById("result").innerHTML =
+            "Please enter both values.";
+        return;
+    }
+
+    let bmi = weight / (height * height);
+
+    document.getElementById("result").innerHTML =
+        "Your BMI is " + bmi.toFixed(1);
+}
