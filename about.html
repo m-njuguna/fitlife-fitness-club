@@ -42,12 +42,13 @@
   </nav>
 
   <!-- Hero/About Section -->
-  <section class="bg-light py-5">
-    <div class="container text-center">
-      <!-- Large heading -->
-      <h1 class="display-5 fw-bold">About FitLife Fitness Club</h1>
-      <!-- Lead text (slightly larger than normal paragraph) -->
-      <p class="lead">Helping people build healthier, stronger, and happier lives.</p>
+  <section class="bg-light py-5 text-center">
+    <div class="container">
+      <!-- Main heading and tagline -->
+      <h1 class="display-4 fw-bold text-primary">About FitLife Fitness Club</h1>
+      <p class="lead text-muted">Helping people build healthier, stronger, and happier lives.</p>
+      <!-- Call-to-action button -->
+      <a href="membership.html" class="btn btn-success btn-lg mt-3">Join Us Today</a>
     </div>
   </section>
 
@@ -113,29 +114,50 @@
   </section>
 
   <!-- Stats Section -->
-  <section class="bg-dark text-white py-5">
-    <div class="container">
-      <div class="row text-center">
-        <!-- Four stats displayed side by side -->
-        <div class="col-md-3">
-          <h2>500+</h2>
-          <p>Members</p>
-        </div>
-        <div class="col-md-3">
-          <h2>20+</h2>
-          <p>Fitness Classes</p>
-        </div>
-        <div class="col-md-3">
-          <h2>10</h2>
-          <p>Certified Trainers</p>
-        </div>
-        <div class="col-md-3">
-          <h2>5★</h2>
-          <p>Customer Rating</p>
-        </div>
+  <!-- Stats Section -->
+<section class="bg-dark text-white py-5">
+  <div class="container">
+    <div class="row text-center">
+      <!-- Each stat has a data-target attribute for animation -->
+      <div class="col-md-3">
+        <h2 class="fw-bold text-success counter" data-target="500">0</h2>
+        <p>Members</p>
+      </div>
+      <div class="col-md-3">
+        <h2 class="fw-bold text-success counter" data-target="20">0</h2>
+        <p>Fitness Classes</p>
+      </div>
+      <div class="col-md-3">
+        <h2 class="fw-bold text-success counter" data-target="10">0</h2>
+        <p>Certified Trainers</p>
+      </div>
+      <div class="col-md-3">
+        <h2 class="fw-bold text-success counter" data-target="5">0</h2>
+        <p>Customer Rating ★</p>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<!-- Counter Script -->
+<script>
+  // Animate numbers from 0 up to their target
+  document.querySelectorAll('.counter').forEach(counter => {
+    const updateCount = () => {
+      const target = +counter.getAttribute('data-target'); // target number
+      const count = +counter.innerText; // current number
+      const increment = target / 100; // speed of counting
+
+      if (count < target) {
+        counter.innerText = Math.ceil(count + increment);
+        setTimeout(updateCount, 30); // repeat until target reached
+      } else {
+        counter.innerText = target + "+"; // add + for style
+      }
+    };
+    updateCount();
+  });
+</script>
 
   <!-- Footer -->
   <footer class="bg-dark text-white text-center py-3">
