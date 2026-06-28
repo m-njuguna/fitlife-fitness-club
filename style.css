@@ -1,1 +1,128 @@
-/* ========================== GENERAL STYLING========================== */body { font-family: Arial, Helvetica, sans-serif; background-color: #f8f9fa; color: #333;}/* ========================== NAVIGATION========================== */.navbar-brand { font-size: 1.8rem; font-weight: bold;}.navbar-nav .nav-link { margin-left: 10px; transition: color 0.3s ease;}.navbar-nav .nav-link:hover { color: #ffc107; /* gold hover effect */}/* ========================== BUTTONS========================== */.btn { transition: all 0.3s ease;}.btn:hover { transform: scale(1.05); /* subtle grow on hover */}/* ========================== CARDS========================== */.card { border: none; transition: all 0.3s ease;}.card:hover { transform: translateY(-8px); box-shadow: 0 8px 20px rgba(0,0,0,0.15);}/* ========================== FOOTER========================== */footer { margin-top: 50px;}footer p { margin-bottom: 5px;}/* ========================== SECTIONS========================== */section { padding-top: 60px; padding-bottom: 60px;}/* ========================== HOMEPAGE HERO SECTION========================== */.hero { position: relative; background: url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1600") center/cover no-repeat; height: 400px; color: white; display: flex; align-items: center; justify-content: center;}.hero::before { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,.55); /* dark overlay */ z-index: 0;}.hero .container { position: relative; z-index: 1; text-align: center;}this is my current css code
+/* ==========================
+   GENERAL STYLING
+   Sets default font, background, and text color
+========================== */
+body {
+  font-family: Arial, Helvetica, sans-serif; /* Clean, readable font */
+  background-color: #f8f9fa; /* Light gray background */
+  color: #333; /* Dark text for contrast */
+}
+
+/* ==========================
+   NAVIGATION
+   Styles the navbar brand and links
+========================== */
+.navbar-brand {
+  font-size: 1.8rem; /* Larger logo text */
+  font-weight: bold; /* Bold for emphasis */
+}
+
+.navbar-nav .nav-link {
+  margin-left: 10px; /* Space between links */
+  transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffc107; /* Gold hover color */
+}
+
+/* ==========================
+   BUTTONS
+   Adds hover animation to buttons
+========================== */
+.btn {
+  transition: all 0.3s ease; /* Smooth transition */
+}
+
+.btn:hover {
+  transform: scale(1.05); /* Slight grow effect */
+}
+
+/* ==========================
+   CARDS
+   Removes border and adds hover animation
+========================== */
+.card {
+  border: none; /* Clean look */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.card:hover {
+  transform: translateY(-8px); /* Lift card upwards */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Shadow for depth */
+}
+.section-title{
+
+    background:#198754;
+
+    color:white;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    width:fit-content;
+
+    margin:0 auto 50px;
+
+}
+/* ==========================
+   FOOTER
+   Adds spacing and styles footer text
+========================== */
+footer {
+  margin-top: 50px; /* Space above footer */
+}
+
+footer p {
+  margin-bottom: 5px; /* Small spacing between lines */
+}
+
+/* ==========================
+   SECTIONS
+   Adds consistent padding to all sections
+========================== */
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* ==========================
+   HOMEPAGE HERO SECTION
+   Background image with overlay
+========================== */
+.hero {
+  position: relative; /* Needed for overlay */
+  background: url("https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=1600") center/cover no-repeat; /* Gym image */
+  height: 400px; /* Fixed height */
+  color: white; /* White text for contrast */
+  display: flex; /* Center content */
+  align-items: center; /* Vertical center */
+  justify-content: center; /* Horizontal center */
+}
+
+.hero::before {
+  content: ""; /* Empty overlay element */
+  position: absolute;
+  inset: 0; /* Cover entire hero */
+  background: rgba(0,0,0,.55); /* Semi-transparent black overlay */
+  z-index: 0; /* Behind text */
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1; /* Text above overlay */
+  text-align: center; /* Centered text */
+}
+
+/* ==========================
+   FEATURE BOXES
+   Used in About/Trainers sections
+========================== */
+.feature-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover */
+}
+.feature-box:hover {
+  transform: translateY(-5px); /* Lift effect */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* Shadow for depth */
+}
